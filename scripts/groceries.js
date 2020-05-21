@@ -20,7 +20,67 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00
-	}
+	},
+	{
+		name: "apple",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.00
+	},
+	{
+		name: "beef",
+		vegetarian: false,
+		glutenFree: true,
+		price: 3.99
+	},
+	{
+		name: "pasta",
+		vegetarian: true,
+		glutenFree: false,
+		price: 3.00
+	},
+	{
+		name: "olive oil",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.50
+	},
+	{
+		name: "almond",
+		vegetarian: true,
+		glutenFree: true,
+		price: 3.50
+	},
+	{
+		name: "tuna sandwich",
+		vegetarian: false,
+		glutenFree: false,
+		price: 3.00
+	},
+	{
+		name: "chicken",
+		vegetarian: false,
+		glutenFree: true,
+		price: 3.00
+	},
+	{
+		name: "honey",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.50
+	},
+	{
+		name: "regular milk",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.00
+	},
+	{
+		name: "almond milk",
+		vegetarian: true,
+		glutenFree: true,
+		price: 3.50
+	},
 ];
 	
 
