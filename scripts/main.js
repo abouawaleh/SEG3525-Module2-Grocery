@@ -46,13 +46,13 @@ function populateListProductChoices(slct1, slct2) {
     	var tr = document.createElement('tr');
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('\u0020'));
-        tr.appendChild(th)
+        tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Product'));
-        tr.appendChild(th)
+        tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Price'));
-        tr.appendChild(th)
+        tr.appendChild(th);
       	
   	var tbdy = document.createElement('tbody');
 	
@@ -74,7 +74,7 @@ function populateListProductChoices(slct1, slct2) {
 		
         	var td = document.createElement('td');
 		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
+		var label = document.createElement('label');
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		td.appendChild(label);
@@ -83,7 +83,7 @@ function populateListProductChoices(slct1, slct2) {
         	var td = document.createElement('td');
 		var productPrice = priceArray[i];
 		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
+		var label = document.createElement('label');
 		label.htmlFor = productPrice;
 		label.appendChild(document.createTextNode(productPrice));
 		td.appendChild(label);
