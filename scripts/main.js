@@ -36,7 +36,6 @@ function populateListProductChoices(slct1, slct2) {
 		
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
-    var priceArray = restrictListProductPrices(products, s1.value);
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
 	var tbl = document.createElement('table');
   	tbl.style.width = '100%';
@@ -49,12 +48,39 @@ function populateListProductChoices(slct1, slct2) {
         tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Product'));
-        tr.appendChild(th);
-        var th = document.createElement('th');
-        th.appendChild(document.createTextNode('Price'));
-        tr.appendChild(th);      	
+        tr.appendChild(th);  	
   	tbl.appendChild(thead);
 	
+  	var tbdy = document.createElement('tbody');
+	
+	// for each item in the array, create a checkbox element, each containing information such as:
+	// <input type="checkbox" name="product" value="Bread">
+	// <label for="Bread">Bread/label><br>
+  	for (var i = 0; i < optionArray; i++) {
+    		var tr = document.createElement('tr');
+		
+        	var td = document.createElement('td');
+		var productName = optionArray[i];
+		// create the checkbox and add in HTML DOM
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		checkbox.value = productName;
+		td.appendChild(checkbox);
+        	tr.appendChild(td);
+		
+        	var td = document.createElement('td');
+		// create a label for the checkbox, and also add in HTML DOM
+		var label = document.createElement('label');
+		label.htmlFor = productName;
+		label.appendChild(document.createTextNode(productName));
+		td.appendChild(label);
+		tr.appendChild(td);
+		
+		
+		tbdy.appendChild(tr);
+      	}    	
+  	tbl.appendChild(tbdy);
   	s2.appendChild(tbl);
 }
 	
