@@ -92,7 +92,7 @@ function populateListProductChoices(slct1, slct2) {
 		tbdy.appendChild(tr);
       	}    	
   	tbl.appendChild(tbdy);
-  	s2.appendChild(tbl)
+  	s2.appendChild(tbl);
 }
 	
 // This function is called when the "Add selected items to cart" button in clicked
