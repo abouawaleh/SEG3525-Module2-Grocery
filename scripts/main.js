@@ -52,8 +52,9 @@ function populateListProductChoices(slct1, slct2) {
         tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Price'));
-        tr.appendChild(th);
-      	
+        tr.appendChild(th);      	
+  	tbl.appendChild(thead);
+	
   	var tbdy = document.createElement('tbody');
 	
 	// for each item in the array, create a checkbox element, each containing information such as:
