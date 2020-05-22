@@ -54,7 +54,8 @@ function populateListProductChoices(slct1, slct2) {
         tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Price'));
-        tr.appendChild(th);      	
+        tr.appendChild(th); 
+	thead.appendChild(tr);
   	tbl.appendChild(thead);
 	
   	var tbdy = document.createElement('tbody');
