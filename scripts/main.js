@@ -39,6 +39,7 @@ function populateListProductChoices(slct1, slct2) {
     var priceArray = restrictListProductPrices(products, s1.value);
 	
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
+	debugger;
 	var tbl = document.createElement('table');
   	tbl.style.width = '100%';
   	tbl.setAttribute('border', '1');
