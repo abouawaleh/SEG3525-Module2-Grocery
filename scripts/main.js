@@ -63,7 +63,7 @@ function populateListProductChoices(slct1, slct2) {
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
-  	for (var i = 0; i < optionArray; i++) {
+  	for (var i = 0; i < optionArray.length; i++) {
     		var tr = document.createElement('tr');
 		
         	var td = document.createElement('td');
