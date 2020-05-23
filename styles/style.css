@@ -1,5 +1,14 @@
-/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+/* Header/Logo Title styles */
+/* This style sheet is taken from  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
 
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp */
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -37,6 +46,7 @@
 }
 
 /* ---------------------------- Table styles ---------------------------- */
+/* Code pour Table styles inspiré par https://www.w3schools.com/Css/tryit.asp?filename=trycss_table_hover */
 table {
   border-collapse: collapse;
   width: 100%;
