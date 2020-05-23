@@ -111,6 +111,9 @@ function restrictListProducts(prods, restriction, restriction2) {
 		else if ((restriction2 == "None") && (prods[i].organic == false)){
 			product_organic.push(prods[i]);
 		}
+		else if ((restriction2 == "All")){
+			product_organic.push(prods[i]);
+		}
 	}
 	let product_names = [];
 	for (let i=0; i<product_organic.length; i+=1) {
@@ -134,6 +137,9 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 			product_organic.push(prods[i]);
 		}
 		else if ((restriction2 == "None") && (prods[i].organic == false)){
+			product_organic.push(prods[i]);
+		}
+		else if ((restriction2 == "All")){
 			product_organic.push(prods[i]);
 		}
 	}
