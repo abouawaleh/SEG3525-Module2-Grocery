@@ -133,7 +133,7 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 		if ((restriction2 == "Organic") && (prods[i].organic == true)){
 			product_organic.push(prods[i]);
 		}
-		else {
+		else if ((restriction2 == "None") && (prods[i].organic == false)){
 			product_organic.push(prods[i]);
 		}
 	}
