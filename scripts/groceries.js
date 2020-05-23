@@ -126,17 +126,26 @@ function restrictListProducts(prods, restriction, restriction2) {
 	return product_names;
 }
 
-function restrictListProductPrices(prods, restriction) {
+function restrictListProductPrices(prods, restriction, restriction2) {	
+	let product_organic = [];
+	for (let i=0; i<prods.length; i+=1) {
+		if ((restriction2 == "Organic") && (prods[i].organic == true)){
+			product_organic.push(prods[i].price);
+		}
+		else
+			product_organic.push(prods[i].price);
+		}
+	}
 	let product_prices = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+		if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
 			product_prices.push(prods[i].price);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_prices.push(prods[i].price);
+		else if ((restriction == "GlutenFree") && (product_organic[i].glutenFree == true)){
+			product_prices.push(product_organic[i].price);
 		}
 		else if (restriction == "None"){
-			product_prices.push(prods[i].price);
+			product_prices.push(product_organic[i].price);
 		}
 	}
 	return product_prices;
