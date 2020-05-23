@@ -42,7 +42,6 @@ function populateListProductChoices(slct1, slct2) {
 	debugger;
 	var tbl = document.createElement('table');
   	tbl.style.width = '100%';
-  	tbl.setAttribute('border', '1');
 	
   	var thead = document.createElement('thead');
     	var tr = document.createElement('tr');
