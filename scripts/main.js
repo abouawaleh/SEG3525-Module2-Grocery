@@ -35,8 +35,8 @@ function populateListProductChoices(slct1, slct2) {
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
-    var priceArray = restrictListProductPrices(products, s1.value);
+    var optionArray = restrictListProducts(products, s1.value, "orgSelect");
+    var priceArray = restrictListProductPrices(products, s1.value, "orgSelect");
 	
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
 	debugger;
