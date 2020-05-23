@@ -88,7 +88,7 @@ function populateListProductChoices(slct1, slct2) {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label');
 		label.htmlFor = productPrice;
-		label.appendChild(document.createTextNode(productPrice));
+		label.appendChild(document.createTextNode("$ "+productPrice));
 		td.appendChild(label);
 		tr.appendChild(td);
 		
@@ -124,6 +124,6 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is $ " + getTotalPrice(chosenProducts)));
 		
 }
