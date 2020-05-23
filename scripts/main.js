@@ -30,17 +30,17 @@ function openInfo(evt, tabName) {
 function populateListProductChoices(slct1, slct2, slct3) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
-    var s3 = document.getElementById(slct2);
+    var s3 = document.getElementById(slct3);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s3.innerHTML = "";
-		
+		debugger;
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value, s2.value);
     var priceArray = restrictListProductPrices(products, s1.value, s2.value);
 	
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
-	debugger;
+	
 	var tbl = document.createElement('table');
   	tbl.style.width = '100%';
 	
