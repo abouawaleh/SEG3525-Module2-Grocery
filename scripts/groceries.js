@@ -18,11 +18,18 @@ var products = [
 		price: 2.35
 	},
 	{
+		name: "Hot Dog",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 3.09
+	},
+	{
 		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 10.04
+		price: 7.04
 	},
 	{
 		name: "Apple",
@@ -30,6 +37,20 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 2.12
+	},
+	{
+		name: "Strussel",
+		vegetarian: false,
+		glutenFree: false,
+		organic: false,
+		price: 3.69
+	},
+	{
+		name: "Coffee",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 2.49
 	},
 	{
 		name: "Beef",
@@ -44,6 +65,13 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 3.38
+	},
+	{
+		name: "Strawberry Shortcake",
+		vegetarian: false,
+		glutenFree: false,
+		organic: false,
+		price: 8.39
 	},
 	{
 		name: "Olive oil",
