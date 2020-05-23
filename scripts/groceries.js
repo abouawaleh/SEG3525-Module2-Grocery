@@ -4,82 +4,95 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "Brocoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "Bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
-		price: 10.00
+		organic: false,
+		price: 10.04
 	},
 	{
-		name: "apple",
+		name: "Apple",
 		vegetarian: true,
 		glutenFree: true,
-		price: 2.00
+		organic: true,
+		price: 2.12
 	},
 	{
-		name: "beef",
+		name: "Beef",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 3.99
 	},
 	{
-		name: "pasta",
+		name: "Pasta",
 		vegetarian: true,
 		glutenFree: false,
-		price: 3.00
+		organic: false,
+		price: 3.38
 	},
 	{
-		name: "olive oil",
+		name: "Olive oil",
 		vegetarian: true,
 		glutenFree: true,
-		price: 2.50
+		organic: true,
+		price: 2.58
 	},
 	{
-		name: "almond",
+		name: "Almond",
 		vegetarian: true,
 		glutenFree: true,
-		price: 3.50
+		organic: true,
+		price: 3.51
 	},
 	{
-		name: "tuna sandwich",
+		name: "Tuna Sandwich",
 		vegetarian: false,
 		glutenFree: false,
-		price: 3.00
+		organic: false,
+		price: 3.11
 	},
 	{
-		name: "chicken",
+		name: "Chicken",
 		vegetarian: false,
 		glutenFree: true,
-		price: 3.00
+		organic: false,
+		price: 3.02
 	},
 	{
-		name: "honey",
+		name: "Honey",
 		vegetarian: true,
 		glutenFree: true,
-		price: 2.50
+		organic: true,
+		price: 2.54
 	},
 	{
-		name: "regular milk",
+		name: "Regular milk",
 		vegetarian: true,
 		glutenFree: true,
-		price: 2.00
+		organic: false,
+		price: 2.18
 	},
 	{
-		name: "almond milk",
+		name: "Almond milk",
 		vegetarian: true,
 		glutenFree: true,
-		price: 3.50
+		organic: true,
+		price: 3.45
 	},
 ];
 	
@@ -103,7 +116,19 @@ function restrictListProducts(prods, restriction) {
 	}
 	return product_names;
 }
-					   
+function restrictListOrganic(prods, restriction) {
+	let product_prices = [];
+	for (let i=0; i<prods.length; i+=1) {
+		if ((restriction == "Organic") && (prods[i].organic == true)){
+			product_prices.push(prods[i].price);
+		}
+		else if (restriction == "None"){
+			product_prices.push(prods[i].price);
+		}
+	}
+	return product_prices;
+}
+
 function restrictListProductPrices(prods, restriction) {
 	let product_prices = [];
 	for (let i=0; i<prods.length; i+=1) {
