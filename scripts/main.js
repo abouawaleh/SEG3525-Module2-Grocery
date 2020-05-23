@@ -27,16 +27,17 @@ function openInfo(evt, tabName) {
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2) {
+function populateListProductChoices(slct1, slct2, slct3) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
+    var s3 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
-    s2.innerHTML = "";
+    s3.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value, "orgSelect");
-    var priceArray = restrictListProductPrices(products, s1.value, "orgSelect");
+    var optionArray = restrictListProducts(products, s1.value, s2.value);
+    var priceArray = restrictListProductPrices(products, s1.value, s2.value);
 	
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
 	debugger;
@@ -95,7 +96,7 @@ function populateListProductChoices(slct1, slct2) {
 		tbdy.appendChild(tr);
       	}    	
   	tbl.appendChild(tbdy);
-  	s2.appendChild(tbl);
+  	s3.appendChild(tbl);
 }
 	
 // This function is called when the "Add selected items to cart" button in clicked
