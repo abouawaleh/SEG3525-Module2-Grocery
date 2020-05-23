@@ -107,7 +107,7 @@ function restrictListProducts(prods, restriction, restriction2) {
 		if ((restriction2 == "Organic") && (prods[i].organic == true)){
 			product_organic.push(prods[i].name);
 		}
-		else
+		else {
 			product_organic.push(prods[i].name);
 		}
 	}
@@ -132,7 +132,7 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 		if ((restriction2 == "Organic") && (prods[i].organic == true)){
 			product_organic.push(prods[i].price);
 		}
-		else
+		else {
 			product_organic.push(prods[i].price);
 		}
 	}
