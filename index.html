@@ -6,6 +6,10 @@
 </head>
 
 <body>
+  <div class="title">
+    <h1>Fresh Parks Grocery</h1>
+    <p>Where the food is fresh</p>
+  </div>
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
@@ -20,16 +24,20 @@
     <h3>Client Information</h3>
     <p>Tell us a bit about you.</p>
   </div>
-  <div class="source-page">
+  <div class="source-page">	
+	<p>Would you like Organic foods?:</p>
+	<select id="orgSelect" name="orgSelect" class="custom-select" style="width:200px;" >
+	  <option value=""></option>
+	  <option value="Organic">Organic</option>
+          <option value="None">None</option>
+	</select>
 	<p>Choose a Category:</p>
-	<div class="custom-select" style="width:200px;">
-	  <select id="dietSelect" name="dietSelect" style="width:200px;" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	    <option value=""></option>
-	    <option value="Vegetarian">Vegetarian</option>
-            <option value="GlutenFree">GlutenFree</option>
-            <option value="None">None</option>
-	  </select>
-	</div>
+	<select id="dietSelect" name="dietSelect" class="custom-select" style="width:200px;" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	  <option value=""></option>
+	  <option value="Vegetarian">Vegetarian</option>
+          <option value="GlutenFree">GlutenFree</option>
+          <option value="None">None</option>
+	</select>
   </div>
 </div>
 
