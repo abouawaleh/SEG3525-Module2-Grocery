@@ -129,7 +129,11 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction, restriction2) {
+function restrictListProducts(prods, restriction, restriction2) {	
+	//sort arrays
+	//Code pour sort inspiré de https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+	prods.sort(function(a, b) { return a.price-b.price; });
+	
 	let product_organic = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction2 == "Organic") && (prods[i].organic == true)){
@@ -158,6 +162,10 @@ function restrictListProducts(prods, restriction, restriction2) {
 }
 
 function restrictListProductPrices(prods, restriction, restriction2) {	
+	//sort arrays
+	//Code pour sort inspiré de https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+	prods.sort(function(a, b) { return a.price-b.price; });
+	
 	let product_organic = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction2 == "Organic") && (prods[i].organic == true)){
