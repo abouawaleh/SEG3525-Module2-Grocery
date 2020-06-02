@@ -5,7 +5,7 @@
 var products = [
 	{
 		name: "Brocoli",
-		image: "brocoli.jpg",
+		image: "images/brocoli.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -14,7 +14,7 @@ var products = [
 	},
 	{
 		name: "Bread",
-		image: "bread.jpg",
+		image: "images/bread.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -23,7 +23,7 @@ var products = [
 	},
 	{
 		name: "Hot Dog",
-		image: "hot-dog.jpg",
+		image: "images/hot-dog.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -32,7 +32,7 @@ var products = [
 	},
 	{
 		name: "Salmon",
-		image: "salmon.jpeg",
+		image: "images/salmon.jpeg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -41,7 +41,7 @@ var products = [
 	},
 	{
 		name: "Apple",
-		image: "apple.jpg",
+		image: "images/apple.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -50,7 +50,7 @@ var products = [
 	},
 	{
 		name: "Streusel",
-		image: "streusel.jpg",
+		image: "images/streusel.jpg",
 		vegetarian: false,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -59,7 +59,7 @@ var products = [
 	},
 	{
 		name: "Coffee",
-		image: "coffee.jpg",
+		image: "images/coffee.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -68,7 +68,7 @@ var products = [
 	},
 	{
 		name: "Beef",
-		image: "beef.jpg",
+		image: "images/beef.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -77,7 +77,7 @@ var products = [
 	},
 	{
 		name: "Pasta",
-		image: "pasta.jpg",
+		image: "images/pasta.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -86,7 +86,7 @@ var products = [
 	},
 	{
 		name: "Strawberry Shortcake",
-		image: "strawberry-shortcake.jpg",
+		image: "images/strawberry-shortcake.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -95,7 +95,7 @@ var products = [
 	},
 	{
 		name: "Olive oil",
-		image: "olive-oil.jpg",
+		image: "images/olive-oil.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -104,7 +104,7 @@ var products = [
 	},
 	{
 		name: "Almond",
-		image: "almond.jpg",
+		image: "images/almond.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -113,7 +113,7 @@ var products = [
 	},
 	{
 		name: "Tuna Sandwich",
-		image: "tuna-sandwich.jpg",
+		image: "images/tuna-sandwich.jpg",
 		vegetarian: false,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -122,7 +122,7 @@ var products = [
 	},
 	{
 		name: "Chicken",
-		image: "chicken.jpg",
+		image: "images/chicken.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -131,7 +131,7 @@ var products = [
 	},
 	{
 		name: "Honey",
-		image: "honey.jpg",
+		image: "images/honey.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -140,7 +140,7 @@ var products = [
 	},
 	{
 		name: "Regular milk",
-		image: "milk.jpg",
+		image: "images/milk.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -149,7 +149,7 @@ var products = [
 	},
 	{
 		name: "Almond milk",
-		image: "almond-milk.jpg",
+		image: "images/almond-milk.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
