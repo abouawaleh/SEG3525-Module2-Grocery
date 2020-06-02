@@ -28,6 +28,7 @@ function populateListProductChoices(slct1, slct2, slct3) {
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value, s2.value);
     var priceArray = restrictListProductPrices(products, s1.value, s2.value);
+    var imageArray = restrictListProductImages(products, s1.value, s2.value);
 	
 	//Code pour créer table inspiré de https://stackoverflow.com/questions/14643617/create-table-using-javascript
 	
@@ -41,6 +42,9 @@ function populateListProductChoices(slct1, slct2, slct3) {
         tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Product'));
+        tr.appendChild(th);
+        var th = document.createElement('th');
+        th.appendChild(document.createTextNode('\u0020'));
         tr.appendChild(th);
         var th = document.createElement('th');
         th.appendChild(document.createTextNode('Price'));
@@ -72,6 +76,14 @@ function populateListProductChoices(slct1, slct2, slct3) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		td.appendChild(label);
+		tr.appendChild(td);
+		
+		var td = document.createElement('td');
+		var productImage = imageArray[i];
+		// create an image for the checkbox, and also add in HTML DOM
+		var img = document.createElement('img');
+		img.src = productImage;
+		td.appendChild(img);
 		tr.appendChild(td);
 		
         	var td = document.createElement('td');
