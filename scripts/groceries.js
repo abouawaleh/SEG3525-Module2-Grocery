@@ -5,6 +5,7 @@
 var products = [
 	{
 		name: "Brocoli",
+		image: "brocoli.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -13,6 +14,7 @@ var products = [
 	},
 	{
 		name: "Bread",
+		image: "bread.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -21,6 +23,7 @@ var products = [
 	},
 	{
 		name: "Hot Dog",
+		image: "hot-dog.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -29,6 +32,7 @@ var products = [
 	},
 	{
 		name: "Salmon",
+		image: "salmon.jpeg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -37,6 +41,7 @@ var products = [
 	},
 	{
 		name: "Apple",
+		image: "apple.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -44,7 +49,8 @@ var products = [
 		price: 2.12
 	},
 	{
-		name: "Strussel",
+		name: "Streusel",
+		image: "streusel.jpg",
 		vegetarian: false,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -53,6 +59,7 @@ var products = [
 	},
 	{
 		name: "Coffee",
+		image: "coffee.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -61,6 +68,7 @@ var products = [
 	},
 	{
 		name: "Beef",
+		image: "beef.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -69,6 +77,7 @@ var products = [
 	},
 	{
 		name: "Pasta",
+		image: "pasta.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -77,6 +86,7 @@ var products = [
 	},
 	{
 		name: "Strawberry Shortcake",
+		image: "strawberry-shortcake.jpg",
 		vegetarian: true,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -85,6 +95,7 @@ var products = [
 	},
 	{
 		name: "Olive oil",
+		image: "olive-oil.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -93,6 +104,7 @@ var products = [
 	},
 	{
 		name: "Almond",
+		image: "almond.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -101,6 +113,7 @@ var products = [
 	},
 	{
 		name: "Tuna Sandwich",
+		image: "tuna-sandwich.jpg",
 		vegetarian: false,
 		glutenFree: false,
 		vegNoGluten: false,
@@ -109,6 +122,7 @@ var products = [
 	},
 	{
 		name: "Chicken",
+		image: "chicken.jpg",
 		vegetarian: false,
 		glutenFree: true,
 		vegNoGluten: false,
@@ -117,6 +131,7 @@ var products = [
 	},
 	{
 		name: "Honey",
+		image: "honey.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -125,6 +140,7 @@ var products = [
 	},
 	{
 		name: "Regular milk",
+		image: "milk.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -133,6 +149,7 @@ var products = [
 	},
 	{
 		name: "Almond milk",
+		image: "almond-milk.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
@@ -141,8 +158,6 @@ var products = [
 	},
 ];
 	
-
-
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
@@ -215,6 +230,42 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 	}
 	return product_prices;
 }
+
+function restrictListProductImages(prods, restriction, restriction2) {	
+		//sort arrays
+	//Code pour sort inspiré de https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+	prods.sort(function(a, b) { return a.price-b.price; });
+	
+	let product_organic = [];
+	for (let i=0; i<prods.length; i+=1) {
+		if ((restriction2 == "Organic") && (prods[i].organic == true)){
+			product_organic.push(prods[i]);
+		}
+		else if ((restriction2 == "None") && (prods[i].organic == false)){
+			product_organic.push(prods[i]);
+		}
+		else if ((restriction2 == "All")){
+			product_organic.push(prods[i]);
+		}
+	}
+	let product_images = [];
+	for (let i=0; i<product_organic.length; i+=1) {
+		if ((restriction == "VegNoGluten") && (product_organic[i].vegNoGluten == true)){
+			product_images.push(product_organic[i].image);
+		}
+		else if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
+			product_images.push(product_organic[i].image);
+		}
+		else if ((restriction == "GlutenFree") && (product_organic[i].glutenFree == true)){
+			product_images.push(product_organic[i].image);
+		}
+		else if (restriction == "None"){
+			product_images.push(product_organic[i].image);
+		}
+	}
+	return product_images;
+}
+
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
