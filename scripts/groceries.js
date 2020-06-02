@@ -7,6 +7,7 @@ var products = [
 		name: "Brocoli",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 1.99
 	},
@@ -14,6 +15,7 @@ var products = [
 		name: "Bread",
 		vegetarian: true,
 		glutenFree: false,
+		vegNoGluten: false,
 		organic: false,
 		price: 2.35
 	},
@@ -21,6 +23,7 @@ var products = [
 		name: "Hot Dog",
 		vegetarian: false,
 		glutenFree: true,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.09
 	},
@@ -28,6 +31,7 @@ var products = [
 		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
+		vegNoGluten: false,
 		organic: false,
 		price: 7.04
 	},
@@ -35,6 +39,7 @@ var products = [
 		name: "Apple",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 2.12
 	},
@@ -42,6 +47,7 @@ var products = [
 		name: "Strussel",
 		vegetarian: false,
 		glutenFree: false,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.69
 	},
@@ -49,6 +55,7 @@ var products = [
 		name: "Coffee",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: false,
 		price: 2.49
 	},
@@ -56,6 +63,7 @@ var products = [
 		name: "Beef",
 		vegetarian: false,
 		glutenFree: true,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.99
 	},
@@ -63,13 +71,15 @@ var products = [
 		name: "Pasta",
 		vegetarian: true,
 		glutenFree: false,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.38
 	},
 	{
 		name: "Strawberry Shortcake",
-		vegetarian: false,
+		vegetarian: true,
 		glutenFree: false,
+		vegNoGluten: false,
 		organic: false,
 		price: 8.39
 	},
@@ -77,6 +87,7 @@ var products = [
 		name: "Olive oil",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 2.58
 	},
@@ -84,6 +95,7 @@ var products = [
 		name: "Almond",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 3.51
 	},
@@ -91,6 +103,7 @@ var products = [
 		name: "Tuna Sandwich",
 		vegetarian: false,
 		glutenFree: false,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.11
 	},
@@ -98,6 +111,7 @@ var products = [
 		name: "Chicken",
 		vegetarian: false,
 		glutenFree: true,
+		vegNoGluten: false,
 		organic: false,
 		price: 3.02
 	},
@@ -105,6 +119,7 @@ var products = [
 		name: "Honey",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 2.54
 	},
@@ -112,6 +127,7 @@ var products = [
 		name: "Regular milk",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: false,
 		price: 2.18
 	},
@@ -119,6 +135,7 @@ var products = [
 		name: "Almond milk",
 		vegetarian: true,
 		glutenFree: true,
+		vegNoGluten: true,
 		organic: true,
 		price: 3.45
 	},
@@ -148,7 +165,10 @@ function restrictListProducts(prods, restriction, restriction2) {
 	}
 	let product_names = [];
 	for (let i=0; i<product_organic.length; i+=1) {
-		if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
+		if ((restriction == "VegNoGluten") && (product_organic[i].vegNoGluten == true)){
+			product_names.push(product_organic[i].name);
+		}
+		else if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
 			product_names.push(product_organic[i].name);
 		}
 		else if ((restriction == "GlutenFree") && (product_organic[i].glutenFree == true)){
@@ -180,7 +200,10 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 	}
 	let product_prices = [];
 	for (let i=0; i<product_organic.length; i+=1) {
-		if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
+		if ((restriction == "VegNoGluten") && (product_organic[i].vegNoGluten == true)){
+			product_prices.push(product_organic[i].name);
+		}
+		else if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
 			product_prices.push(product_organic[i].price);
 		}
 		else if ((restriction == "GlutenFree") && (product_organic[i].glutenFree == true)){
