@@ -216,7 +216,7 @@ function restrictListProductPrices(prods, restriction, restriction2) {
 	let product_prices = [];
 	for (let i=0; i<product_organic.length; i+=1) {
 		if ((restriction == "VegNoGluten") && (product_organic[i].vegNoGluten == true)){
-			product_prices.push(product_organic[i].name);
+			product_prices.push(product_organic[i].price);
 		}
 		else if ((restriction == "Vegetarian") && (product_organic[i].vegetarian == true)){
 			product_prices.push(product_organic[i].price);
