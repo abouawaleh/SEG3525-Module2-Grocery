@@ -140,7 +140,7 @@ var products = [
 	},
 	{
 		name: "Regular milk",
-		image: "images/milk.jpg",
+		image: "images/regular-milk.jpg",
 		vegetarian: true,
 		glutenFree: true,
 		vegNoGluten: true,
