@@ -3,6 +3,11 @@ body {
   align: center;
 }
 
+img {
+  width: 300;
+  height: 133;
+}
+
 /* ---------------------------- Title styles ---------------------------- */
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_css_style_header.asp */
 .title {
